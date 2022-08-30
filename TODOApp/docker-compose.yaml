@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  #https://github.com/bentonam/couchbase-docker
+  couchbase:
+    image: bentonam/couchbase-docker:community-5.0.1
+    container_name: couchbase
+    environment:
+      SERVICES: data,index,query,fts
+      CLUSTER_USERNAME: root
+      CLUSTER_PASSWORD: password
+      CLUSTER_NAME: TODO Couchbase Cluster
+      CLUSTER_RAMSIZE: 500
+      BUCKET_RAMSIZE: 300
+      NODE_INIT_INDEX_PATH: /opt/couchbase/var/lib/couchbase/indexes
+      RBAC_USERNAME: root
+      RBAC_PASSWORD: toor
+      BUCKET: TODOApp
+    ports:
+      - 8091-8094:8091-8094
+      - 11210:11210
+    volumes:
+      - couchbase-data:/opt/couchbase/var
+    expose:
+      - 8091
+
+  todo-app:
+    image: esrahankonyar/todo-app
+    container_name: todo-app
+    depends_on:
+      - couchbase
+    environment:
+      COUCHBASE_CONNECTION: couchbase:11210
+      COUCHBASE_BUCKET: TODOApp
+      COUCHBASE_USERNAME: root
+      COUCHBASE_PASSWORD: password
+    ports:
+    - 8080:8080
+
+volumes:
+  couchbase-data:
