@@ -16,20 +16,20 @@ public class UserRequestDto {
 
     @JsonProperty("name")
     @NotBlank
-    @Schema(name = "name", example = "Foo", required = true)
+    @Schema(name = "name", example = "Esra", required = true)
     String name;
 
     @JsonProperty("surname")
     @NotBlank
-    @Schema(name = "surname", example = "Foo", required = true)
+    @Schema(name = "surname", example = "Konyar", required = true)
     String surname;
 
     @JsonProperty("username")
     @NotBlank
-    @Schema(name = "username", example = "Foo", required = true)
+    @Schema(name = "username", example = "esra", required = true)
     String username;
 
-    @Schema(name = "password", example = "abc12345", required = true)
+    @Schema(name = "password", example = "12345678", required = true)
     @JsonProperty("password")
     @NotBlank
     String password;

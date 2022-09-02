@@ -17,14 +17,14 @@ public class UserResponseDto {
     @JsonProperty("userId")
     String id;
     @JsonProperty("username")
-    @Schema(name = "username", example = "Foo", required = true)
+    @Schema(name = "username", example = "Esra", required = true)
     @NotBlank
     String username;
     @JsonProperty("name")
-    @Schema(name = "name", example = "foo", required = true)
+    @Schema(name = "name", example = "Esra", required = true)
     String name;
     @JsonProperty("surname")
-    @Schema(name = "surname", example = "foo", required = true)
+    @Schema(name = "surname", example = "Konyar", required = true)
     String surname;
 
 }

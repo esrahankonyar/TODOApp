@@ -9,4 +9,6 @@ public class ErrorMessages {
     public static final String USER_NOT_FOUND = "User not found.";
     public static final String INCORRECT_USER_CREDENTIALS = "Incorrect username or password.";
 
+    public static final String TODO_ITEM_NOT_FOUND = "Todo item not found.";
+
 }
