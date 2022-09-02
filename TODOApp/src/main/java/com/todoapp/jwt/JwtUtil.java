@@ -31,7 +31,7 @@ public class JwtUtil {
         UserDetailModel userPrincipal = (UserDetailModel) authentication.getPrincipal();
 
         final Date createdDate = new Date();
-        final Date expirationDate = new Date(createdDate.getTime() + jwtExpirationMs * 1000);
+        final Date expirationDate = new Date(createdDate.getTime() + jwtExpirationMs);
 
         return JWT.create()
                 .withSubject(userPrincipal.getUsername())

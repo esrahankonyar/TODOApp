@@ -34,6 +34,10 @@ services:
       COUCHBASE_BUCKET: TODOApp
       COUCHBASE_USERNAME: root
       COUCHBASE_PASSWORD: password
+      JWT_SECRET: usertoken
+      JWT_EXPIRATION_MS: 86400000
+      JWT_ISSUER: usr
+      SWAGGER-UI-ENABLED: "true"
     ports:
     - 8080:8080
 
