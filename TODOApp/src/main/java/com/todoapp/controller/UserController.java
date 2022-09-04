@@ -29,7 +29,7 @@ public class UserController {
     @ResponseStatus(HttpStatus.OK)
     @Operation(summary = "Edit User")
     @SecurityRequirement(name = "Bearer Auth")
-    public UserResponseDto editUser(@RequestParam String userId, @RequestBody @Valid UserRequestDto user) {
+    public UserResponseDto editUser(@PathVariable String userId, @RequestBody @Valid UserRequestDto user) {
         return userService.editUser(userId, user);
     }
 

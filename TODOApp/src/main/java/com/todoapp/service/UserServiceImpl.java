@@ -35,9 +35,9 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserResponseDto editUser(String userId, UserRequestDto userRequestDTO) {
-        User exitUser = getUserById(userId);
+        User existUser = getUserById(userId);
         User user = userMapper.userDtoToUser(userRequestDTO);
-        user.setId(exitUser.getId());
+        user.setId(existUser.getId());
         user = userRepository.save(user);
         return userMapper.userToUserResponse(user);
     }
@@ -50,8 +50,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserResponseDto getUser(String userId) {
-        User exitUser = getUserById(userId);
-        return userMapper.userToUserResponse(exitUser);
+        User existUser = getUserById(userId);
+        return userMapper.userToUserResponse(existUser);
     }
 
     @Override
@@ -63,9 +63,9 @@ public class UserServiceImpl implements UserService {
     }
 
     private User getUserById(String userId) {
-        Optional<User> exitUser = userRepository.findById(userId);
-        if (!exitUser.isPresent())
+        Optional<User> existUser = userRepository.findById(userId);
+        if (!existUser.isPresent())
             throw new TodoAppException(ErrorMessages.USER_NOT_FOUND);
-        return exitUser.get();
+        return existUser.get();
     }
 }
