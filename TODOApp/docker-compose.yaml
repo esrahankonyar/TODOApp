@@ -39,7 +39,7 @@ services:
       JWT_ISSUER: usr
       SWAGGER-UI-ENABLED: "true"
     ports:
-    - 8080:8080
+    - 8081:8081
 
 volumes:
   couchbase-data:
