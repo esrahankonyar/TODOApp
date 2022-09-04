@@ -1,5 +1,16 @@
 # TODOApp
 
+## How To Build TodoApp Project?
+- You should run following command in TodoApp project
+```shell 
+mvn clean package
+``` 
+## How To Run Test TodoApp Project?
+- You should run following command in TodoApp project
+```shell 
+mvn test
+```
+
 ## How To Run TodoApp Project?
 
 1- Firstly, you must have `Docker` application.\
@@ -35,15 +46,15 @@ Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJST0xFIjoiQURNSU4iLCJzdWIiOiJlc3Jh
 ```
 
 ## Used Dependencies
-- [Java 8]
-- [Spring Boot]
-- [Spring Data Couchbase]
-- [Couchbase]
-- [Swagger]
-- [Maven]
-- [Docker]
-- [JUnit and Mockito]
-- [JWT]
-- [Spring Boot Security]
-- [Mapstruct]
-- [Lombok]
+- Java 8
+- Spring Boot
+- Spring Data Couchbase
+- Couchbase
+- Swagger
+- Maven
+- Docker
+- JUnit and Mockito
+- JWT
+- Spring Boot Security
+- Mapstruct
+- Lombok
